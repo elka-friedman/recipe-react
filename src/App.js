@@ -12,10 +12,10 @@ const App = () => {
   const [query, setQuery] = useState('banana');
 
   useEffect(() => {
-    GetRecipes();
+    getRecipes();
   },[query]);
 
-const GetRecipes = async() => {
+const getRecipes = async() => {
   const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`)
   const data = await response.json();
   setRecipes(data.hits);
@@ -44,7 +44,9 @@ const GetRecipes = async() => {
           key={recipe.recipe.label}
           title={recipe.recipe.label} 
           calories={recipe.recipe.calories} 
-          image={recipe.recipe.image}/>
+          image={recipe.recipe.image}
+          ingredients={recipe.recipe.ingredients}
+          />
       ))}
     </div>
   );
