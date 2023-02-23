@@ -1,15 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 
 const App = () => {
-
+  // app id and key from Edamam's recipe search API
   const APP_ID = '7cd3b232';
-  const APP_KEY ='655235d57a5a0b5705a66bc98f0b86885	—';
+  const APP_KEY ='655235d57a5a0b5705a66bc98f0b8685';
 
-  const exampleReq = `https://api.edamam.com/api/recipes/v2`
+  useEffect(() => {
+    GetRecipes();
+  },[]);
 
-  
+const GetRecipes = async() => {
+  const response = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`)
+  const data = response.json();
+  console.log(data);
+};
+
   return(
     <div className="App">
       <form className="search-form">
