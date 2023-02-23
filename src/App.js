@@ -29,6 +29,7 @@ const GetRecipes = async() => {
   const getSearch = e => {
     e.preventDefault();
     setQuery(search);
+    setSearch('');
   }
 
   return(
