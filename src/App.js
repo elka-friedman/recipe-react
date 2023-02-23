@@ -15,7 +15,6 @@ const App = () => {
       <form className="search-form">
         <input className="search_bar" type="text" />
         <button className="search_button" type="submit">Search</button>
-        <h1>Hello World</h1>
       </form>
     </div>
   );
