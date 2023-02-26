@@ -3,6 +3,20 @@
   background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
 }
 
+.h1 {
+  margin-top: 0;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+}
+
+.h3 {
+  margin-top: 0;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+}
+
 .search_form{
   min-height: 10vh;
   display: flex;

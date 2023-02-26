@@ -34,6 +34,8 @@ const getRecipes = async() => {
 
   return(
     <div className="App">
+      <h1 className="h1">Search Millions of Recipes</h1>
+      <h3 className="h3">Powered by Edamam</h3>
       <form onSubmit={getSearch} className="search_form">
         <input className="search_bar" type="text" value={search} onChange={updateSearch}/>
         <button className="search_button" type="submit">Search</button>
