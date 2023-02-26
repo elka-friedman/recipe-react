@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import Recipe from './Recipe';
-import './App.css';
+import './App.css'; 
 
 const App = () => {
   // app id and key from Edamam's recipe search API
-  const APP_ID = '7cd3b232';
-  const APP_KEY ='655235d57a5a0b5705a66bc98f0b8685';
+  const APP_ID = process.env.REACT_APP_APP_ID;
+  const APP_KEY = process.env.REACT_APP_APP_KEY;
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('banana');
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     getRecipes();
