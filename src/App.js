@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Recipe from './Recipe';
 import './App.css'; 
+import ClearIcon from '@mui/icons-material/Clear';
 
 const App = () => {
   // app id and key from Edamam's recipe search API
