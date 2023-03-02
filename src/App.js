@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Recipe from './Recipe';
 import './App.css'; 
-import ClearIcon from '@mui/icons-material/Clear';
 
 const App = () => {
   // app id and key from Edamam's recipe search API
@@ -23,6 +22,11 @@ const getRecipes = async() => {
   console.log(data.hits);
 };
 
+  const [value,setValue] = useState("original val")
+  const handleClearClick = () => {
+    setValue("");
+  }
+
   const updateSearch = e => {
     setSearch(e.target.value);
   };
@@ -38,7 +42,7 @@ const getRecipes = async() => {
       <h1 className="h1">Search Millions of Recipes</h1>
       <h3 className="h3">Powered by Edamam</h3>
       <form onSubmit={getSearch} className="search_form">
-        <input className="search_bar" type="text" value={search} onChange={updateSearch}/>
+        <input className="search_bar" type="search" value={search} onChange={updateSearch}/>
         <button className="search_button" type="submit">Search</button>
       </form>
 
