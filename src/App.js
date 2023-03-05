@@ -10,7 +10,7 @@ const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
-
+  
   useEffect(() => {
     getRecipes();
   },[query]);
@@ -21,11 +21,6 @@ const getRecipes = async() => {
   setRecipes(data.hits);
   console.log(data.hits);
 };
-
-  const [value,setValue] = useState("original val")
-  const handleClearClick = () => {
-    setValue("");
-  }
 
   const updateSearch = e => {
     setSearch(e.target.value);
@@ -40,7 +35,6 @@ const getRecipes = async() => {
   return(
     <div className="App">
       <h1 className="h1">Search Millions of Recipes</h1>
-      <h3 className="h3">Powered by Edamam</h3>
       <form onSubmit={getSearch} className="search_form">
         <input className="search_bar" type="search" value={search} onChange={updateSearch}/>
         <button className="search_button" type="submit">Search</button>
@@ -48,7 +42,7 @@ const getRecipes = async() => {
 
       <div className='recipes'>
       {recipes.map(recipe =>(
-          <Recipe 
+          <Recipe
           key={recipe.recipe.label}
           title={recipe.recipe.label} 
           calories={recipe.recipe.calories} 
@@ -57,6 +51,7 @@ const getRecipes = async() => {
           />
       ))}
       </div>
+      <h3 className="h3">Powered by Edamam</h3>
     </div>
   );
 };

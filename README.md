@@ -2,3 +2,7 @@ Search through millions of recipes thanks to Edamam's Recipe Search API! Make su
 
 Note that searches per minute are limited by Edamam. If you run out of searches, wait before trying again. 
 
+Try it! (Example)
+Enter "bundt cakes" in the search bar and enjoy various recipes.
+
+
