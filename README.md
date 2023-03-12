@@ -8,7 +8,7 @@ Search through millions of recipes thanks to Edamam's Recipe Search API! Make su
 + If there are no matches to your search, nothing will print to the screen. 
 
 ## Example
-Try it!
+- Try it!
 Enter "bundt cakes" in the search bar and enjoy various recipes.
 
 Tutorial Followed: https://www.youtube.com/watch?v=U9T6YkEDkMo&t=2802s
